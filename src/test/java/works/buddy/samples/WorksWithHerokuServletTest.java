@@ -36,6 +36,6 @@ public class WorksWithHerokuServletTest {
         when(response.getWriter()).thenReturn(writer);
 
         servlet.doGet(request, response);
-        assertEquals("HAPPY NEW YEAR-HARI", new String( out.toByteArray(), "UTF-8"));
+        assertEquals("HAPPY NEW YEAR-hari", new String( out.toByteArray(), "UTF-8"));
     }
 }
