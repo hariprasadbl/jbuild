@@ -22,8 +22,8 @@ pipeline {
 				stage('DEPLOY') {
 					steps {
 						sh '''
-					          scp /opt/jenkins/workspace/pipeline/target/works-with-heroku-1.0.war ec2-user@18.221.223.72:/tomcat/webapps
-                              ssh ec2-user@18.221.223.72 'tomcatup'	
+					          scp /opt/jenkins/workspace/pipeline/target/works-with-heroku-1.0.war -o StrictHostKeyChecking=no ec2-user@18.221.223.72:/tomcat/webapps
+                              ssh -o StrictHostKeyChecking=no ec2-user@18.221.223.72 'tomcatup'	
 						
 						
 						'''
